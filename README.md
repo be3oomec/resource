@@ -1,3 +1,4 @@
-# Portfolio - сборка Gulp
+# Resource - сборка Gulp
 
-> Используется Gulp 4
+LINK ON PAGE:
+https://be3oomec.github.io/resource/
