@@ -1,0 +1,35 @@
+.blockquote {
+  max-width: 276px;
+  width: 100%;
+  padding: 30px;
+  background-color: #fff;
+
+  @include _576 {
+    max-width: 100%;
+  }
+}
+
+.blockquote__heading {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.4;
+  color: #524B9A;
+  margin-bottom: 22px;
+  max-width: 180px;
+}
+
+.blockquote p {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #050505;
+  margin-bottom: 18px;
+}
+
+.blockquote__author {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #524B9A;
+}

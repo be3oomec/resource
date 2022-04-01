@@ -1,0 +1,106 @@
+.search-card {
+  padding: 30px;
+  max-width: 285px;
+  width: 100%;
+  position: relative;
+  border: 3px solid #E6E8EE;
+
+  @include _375 {
+    max-width: 100%;
+  }
+}
+
+.search-card__title {
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 1.35;
+  color: #252061;
+  margin-bottom: 15px;
+}
+
+.search-card__list {
+  margin-bottom: 50px;
+}
+
+.search-card__item {
+  padding-left: 28px;
+  position: relative;
+  &:not(:last-child) {
+    margin-bottom: 8px;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 0;
+    background-image: url(../img/list.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 14px;
+    height: 18px;
+  }
+}
+
+.search-card__link {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.9;
+  color: #F55F39;
+  transition: color 0.3s;
+  position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: $blue;
+    transition: width 0.3s;
+  }
+
+  &:focus {
+    &:before {
+      width: 100%;
+    }
+  }
+  &:hover {
+    &:before {
+      width: 100%;
+    }
+  }
+  &:active {
+    &:before {
+      width: 50%;
+    }
+  }
+}
+
+.search-card__bottom-link {
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 2;
+  color: #252061;
+  background-color: #EEF1F6;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 15px 30px;
+  transition: background-color 0.3s, color 0.3s, opacity 0.3s;
+
+  &:focus {
+    background-color: $orange;
+    color: $white;
+  }
+  &:hover {
+    background-color: $orange;
+    color: $white;
+  }
+  &:active {
+    opacity: 0.5;
+  }
+}

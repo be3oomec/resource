@@ -1,0 +1,84 @@
+.access {
+  padding: 340px 0 0 0;
+  margin-top: -300px;
+
+  @include adaptive-value('padding-bottom', 140, 50, 1);
+}
+
+// .access__inner {}
+
+.access__title {
+  color: $white;
+  text-align: center;
+  @include adaptive-value('margin-bottom', 60, 30, 1);
+}
+
+.access__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(255px,1fr));
+  grid-gap: 20px;
+  justify-items: center;
+  margin-bottom: 85px;
+}
+
+// .access__item {}
+
+.access__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  flex-wrap: wrap;
+}
+
+.access__info {
+  max-width: 500px;
+}
+
+.access__heading {
+  font-weight: 400;
+  font-size: 21px;
+  line-height: 1.1;
+  color: $white;
+  margin-bottom: 15px;
+  padding-left: 30px;
+  position: relative;
+  &:before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 0;
+    background-image: url(../img/i.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.access__text {
+  font-size: 13px;
+  line-height: 1.6;
+  color: $white;
+
+  @include _768 {
+    margin-bottom: 20px;
+  }
+}
+
+.access__link {
+  font-size: 13px;
+  line-height: 1.6;
+  color: rgba($white,0.7);
+  transition: color 0.3s;
+  &:focus {
+    color: $green;
+  }
+  &:hover {
+    color: $green;
+  }
+  &:active {
+    color: rgba($green,0.7);
+  }
+}

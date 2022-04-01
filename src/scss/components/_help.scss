@@ -1,0 +1,147 @@
+.help {
+  margin-bottom: 50px;
+}
+
+.help__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: max(15px, (100% - 1130px) / 2);
+
+  @include _768 {
+    flex-wrap: wrap;
+  }
+}
+
+.help__left {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  @include _1200 {
+    justify-content: center;
+    text-align: center;
+  }
+  @include _768 {
+    flex-direction: column;
+    margin: 30px auto;
+  }
+}
+
+.help__meet {
+  @include adaptive-value('padding-top', 40, 20, 1);
+  @include adaptive-value('padding-bottom', 40, 20, 1);
+  @include adaptive-value('padding-left', 60, 20, 1);
+  @include adaptive-value('padding-right', 60, 20, 1);
+  color: $white;
+  background-image: url(../img/help-bg.jpg);
+  width: calc(100% - 730px);
+  transform: translateY(-20%);
+
+  @include _1200 {
+    transform: translateY(0);
+    width: calc(100% - 400px);
+  }
+  @include _992 {
+    width: calc(100% - 200px);
+  }
+  @include _768 {
+    width: 105%;
+    margin: 0 -15px;
+  }
+}
+
+.help__title {
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 1.4;
+  color: #2BCA8B;
+  margin-right: 55px;
+
+  @include _1200 {
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+}
+
+// .help__list {}
+
+.help__item {
+  &:not(:last-child) {
+    margin-bottom: 8px;
+  }
+}
+
+.help__link {
+  font-size: 14px;
+  color: #252061;
+
+  transition: color 0.3s;
+  &:focus {
+    color: $orange;
+  }
+  &:hover {
+    color: $orange;
+  }
+  &:active {
+    color: rgba($orange, 0.7);
+  }
+}
+
+.help__heading {
+  font-weight: 400;
+  font-size: 24px;
+  margin-bottom: 25px;
+  max-width: 330px;
+}
+
+.help__descr {
+  margin-bottom: 20px;
+  max-width: 330px;
+
+  @include _768 {
+    max-width: 100%;
+  }
+}
+
+.help__link-block {
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  @include _768 {
+    justify-content: space-between;
+  }
+
+  @include _576 {
+    flex-wrap: wrap;
+  }
+}
+
+.help__meet-list {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-right: 20px;
+
+  @include _576 {
+    margin-bottom: 20px;
+  }
+}
+
+.help__meet-item {
+  max-width: 80px;
+}
+
+.help__meet-item img {
+  border-radius: 10px;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.help__meet-link {
+  @include _375 {
+    max-width: 100%;
+  }
+}

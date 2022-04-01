@@ -1,0 +1,38 @@
+.search {
+  @include adaptive-value('margin-bottom', 100, 25, 1);
+}
+
+// .search__inner {}
+
+.search__top {
+  @include adaptive-value('margin-bottom', 60, 25, 1);
+  text-align: center;
+}
+
+.search__title {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 2;
+  color: #444444;
+}
+
+.search__subtitle {
+  font-weight: 400;
+  @include adaptive-value('font-size', 52, 25, 1);
+  line-height: 0.9;
+  color: #444444;
+}
+
+.search__form {
+  margin: 0 auto;
+  @include adaptive-value('margin-bottom', 60, 25, 1);
+}
+
+.search__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(275px,1fr));
+  grid-gap: 20px;
+  justify-items: center;
+}
+
+// .search__item {}
